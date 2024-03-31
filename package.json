@@ -1,0 +1,13 @@
+
+{
+  "name": "p1-uoc",
+  "source": "src/index.html",
+  "browserslist": "> 2%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "parcel": "latest"
+  }
+}
