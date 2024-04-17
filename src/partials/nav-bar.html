@@ -1,17 +1,30 @@
-<div>
-    <nav class="container">
+<header>
+    <div class="container-nav container">
         <div>
-            <img src="https://placehold.co/120" alt="REGGAETONPARE">
+            <img src="images/logo.png" alt="REGGAETONPARE">
         </div>
-        <div>
-            <ul>
-                <li><a href="">INICI</a></li>
-                <li><a href="">PRESENTACIÓ</a></li>
-                <li><a href="">MEMBRES</a></li>
-                <li><a href="">ALBUMS</a></li>
-                <li><a href="">CONTACTE</a></li>
-            </ul>
+        <div class="desktop-nav">
+            <nav>
+                <ul>
+                    <li><a href="">INICI</a></li>
+                    <li><a href="">QUI SOM?</a></li>
+                    <li><a href="">DISCOGRAFIA</a></li>
+                    <li><a href="">NOTICIES</a></li>
+                </ul>
+            </nav>
         </div>
-
-    </nav>
-</div>
+        <div class="mobile-nav">
+            <div class="nav-btn" onclick="toggleMenu()">
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <nav id="mobile-menu">
+                <ul>
+                    <li><a href="">INICI</a></li>
+                    <li><a href="">QUI SOM?</a></li>
+                    <li><a href="">DISCOGRAFIA</a></li>
+                    <li><a href="">NOTICIES</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>

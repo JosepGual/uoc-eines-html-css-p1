@@ -1,0 +1,40 @@
+footer {
+  padding: 25px 0;
+  background-color: $primary;
+}
+
+.container-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-icons {
+  ul {
+    padding: 0;
+    li {
+      font-size: 250%;
+      display: inline;
+      margin: 15px;
+      padding: 0;
+      list-style-type: none;
+      justify-content: start;
+      a {
+        color: $dark;
+        &:hover {
+          color: $dark-2;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $breakepoint) {
+  .container-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
