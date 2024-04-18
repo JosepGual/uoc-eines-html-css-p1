@@ -1,0 +1,18 @@
+button {
+  background-color: $primary;
+  font-weight: bolder;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 1rem;
+  color: $dark;
+  &:hover{
+    color: $primary;
+    background-color: $dark
+  }
+}
+
+.btn {
+  @extend button;
+  text-decoration: none;
+}
+

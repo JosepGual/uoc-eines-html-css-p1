@@ -1,13 +1,24 @@
 $breakepoint: 800px;
 
 .container {
+  box-sizing: border-box;
+  padding: 0 15px;
   width: 100%;
-  padding: 0 10px;
+  div{
+    padding: 25px 0;
+  }
 }
 
 @media only screen and (min-width: $breakepoint) {
   .container {
     max-width: 78%;
     margin: 0 auto;
+
   }
+}
+
+.d-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }

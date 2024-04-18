@@ -6,18 +6,21 @@
         <div class="desktop-nav">
             <nav>
                 <ul>
-                    <li><a href="">INICI</a></li>
-                    <li><a href="">QUI SOM?</a></li>
+                    <li><a href="/">INICI</a></li>
+                    <li><a href="./presentacio.html">QUI SOM?</a></li>
                     <li><a href="">DISCOGRAFIA</a></li>
                     <li><a href="">NOTICIES</a></li>
                 </ul>
             </nav>
         </div>
         <div class="mobile-nav">
-            <div class="nav-btn" onclick="toggleMenu()">
-                <i class="fa-solid fa-chevron-down"></i>
+            <div class="nav-btn">
+                <i class="nav-btn fa-solid fa-bars" onclick="
+                var menu = document.getElementById('mobile-menu');
+                menu.classList.toggle('d-none')";
+                ></i>
             </div>
-            <nav id="mobile-menu">
+            <nav id="mobile-menu" class="d-none">
                 <ul>
                     <li><a href="">INICI</a></li>
                     <li><a href="">QUI SOM?</a></li>
