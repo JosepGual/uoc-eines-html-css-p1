@@ -1,0 +1,24 @@
+<div class="container">
+    <div>
+        <h1 class="text-center">{{name}}</h1>
+    </div>
+    <div class="trak">
+        <div>
+            <iframe style="border-radius:12px" src="{{url_embed_spotify}}" width="100%" height="352" frameBorder="0"
+                allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
+            <p><strong>Disc: </strong>{{album}}</p>
+            <p><strong>Any: </strong>{{year}}</p>
+        </div>
+        <div>
+            <p>{{{lyrics}}}</p>
+        </div>
+    </div>
+    <div>
+        <if condition="url_embed_yt">
+            <iframe class="yt-video" src="{{url_embed_yt}}" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </if>
+    </div>
+</div>

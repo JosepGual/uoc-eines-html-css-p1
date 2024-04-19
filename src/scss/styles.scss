@@ -78,10 +78,13 @@ body {
 .info-disc {
   display: flex;
   flex-direction: column;
-  text
-  img{
+  justify-content: center;
+  margin: 0 auto;
+  img {
     width: 100%;
+    max-width: 300px;
     height: auto;
+    max-height: 300px;
   }
 }
 
@@ -96,11 +99,48 @@ body {
   }
 }
 
-@media only screen and (min-width: ($breakepoint * 2 )) {
+@media only screen and (min-width: ($breakepoint)) {
   .info-disc {
     flex-direction: row;
-    img{
+
+    img {
       max-width: 300px;
     }
+  }
+}
+
+//Trak
+.trak{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  div{
+    margin: 10px;
+  }
+
+}
+
+//notices
+.notice {
+  text-align: center;
+  background-color: $dark;
+  border-radius: 20px;
+  padding: 25px 25px !important;
+  img {
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+  }
+  a {
+    text-decoration: none;
+    color: $primary;
+  }
+  .title {
+    font-size: 22px;
+  }
+  .date {
+    font-size: 75%;
+    margin-top: 0px;
+    text-align: right;
   }
 }
