@@ -27,7 +27,7 @@ body {
   justify-content: center;
 }
 
-.yt-video{
+.yt-video {
   width: 100%;
   aspect-ratio: 16/9;
 }
@@ -71,5 +71,36 @@ body {
   li {
     line-height: 2;
     list-style: none;
+  }
+}
+
+//Discografia
+.info-disc {
+  display: flex;
+  flex-direction: column;
+  text
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+.text-disc {
+  padding: 0 !important;
+  margin-left: 15px;
+  h3 {
+    margin-top: 5px;
+  }
+  li {
+    line-height: 1.75;
+  }
+}
+
+@media only screen and (min-width: ($breakepoint * 2 )) {
+  .info-disc {
+    flex-direction: row;
+    img{
+      max-width: 300px;
+    }
   }
 }
