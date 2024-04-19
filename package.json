@@ -1,6 +1,6 @@
 {
   "name": "p1-uoc",
-  "source": ["src/index.html"],
+  "source": ["src/*.html"],
   "browserslist": "> 2%, last 2 versions, not dead",
   "scripts": {
     "start": "parcel",
