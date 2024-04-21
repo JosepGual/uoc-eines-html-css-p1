@@ -3,6 +3,14 @@ header {
   background: $primary;
 }
 
+.menu{
+  padding: 0;
+  &:hover{
+    color: $dark;
+    background-color: transparent;
+  }
+}
+
 .container-nav {
   display: flex;
   flex-direction: column;

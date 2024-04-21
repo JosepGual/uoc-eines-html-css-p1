@@ -15,10 +15,7 @@
         </div>
         <div class="mobile-nav">
             <div class="nav-btn">
-                <i class="nav-btn fa-solid fa-bars" onclick="
-                var menu = document.getElementById('mobile-menu');
-                menu.classList.toggle('d-none')";
-                ></i>
+                <button type="button" class="menu"><i class="nav-btn fa-solid fa-bars" onclick="toggleMenu()" aria-label="Menu"></i></button>
             </div>
             <nav id="mobile-menu" class="d-none">
                 <ul>
@@ -31,3 +28,10 @@
         </div>
     </div>
 </header>
+
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('d-none');
+    } 
+</script>
