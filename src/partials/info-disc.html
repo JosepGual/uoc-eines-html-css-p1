@@ -2,26 +2,17 @@
     <img src='{{img_url}}' alt="">
     <div class="text-disc">
         <h3>{{nom}}</h3>
-        <ol class="traks-list-{{id}}">
-
-
-
+        <ol>
+            <each loop="item, index in list">
+                <if condition="!item.link">
+                    <li>{{item.titol}}</li>
+                </if>
+                <else>
+                    <a href='{{item.link}}'>
+                        <li>{{item.titol}}</li>
+                    </a>
+                </else>
+            </each>
         </ol>
     </div>
 </div>
-
-<script type="module">
-    var traks_list = document.getElementsByClassName('traks-list-{{id}}');
-    var list = JSON.parse('{{list}}');
-
-    list.forEach(element => {
-        var listItem = document.createElement('li');
-        var linkItem = document.createElement('a')
-        if (element.link){
-            linkItem.href = element.link
-        }
-        linkItem.textContent = element.titol;
-        listItem.appendChild(linkItem.cloneNode(true))
-        traks_list[0].appendChild(listItem.cloneNode(true))
-    });
-</script>

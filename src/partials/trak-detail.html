@@ -14,11 +14,24 @@
             <p>{{{lyrics}}}</p>
         </div>
     </div>
-    <div>
+    <div class="py">
         <if condition="url_embed_yt">
             <iframe class="yt-video" src="{{url_embed_yt}}" title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </if>
     </div>
+    <if condition="related">
+        <div class="py">
+            <h2>Altres cançons:</h2>
+            <ul>
+                <each loop='item, index in related'>
+                    <a href="{{item.link}}">
+                        <li>{{item.name}}</li>
+                    </a>
+                </each>
+            </ul>
+        </div>
+
+    </if>
 </div>

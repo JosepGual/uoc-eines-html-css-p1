@@ -3,9 +3,10 @@
 @import "_nav";
 @import "_footer";
 @import "_buttons";
+@import "_headings";
 
 //Fonts
-@import "https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap";
 
 @font-face {
   font-family: "Inter";
@@ -25,6 +26,11 @@ body {
 .d-flex-center {
   display: flex;
   justify-content: center;
+}
+
+.py{
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .yt-video {
@@ -89,7 +95,6 @@ body {
 }
 
 .text-disc {
-  padding: 0 !important;
   margin-left: 15px;
   h3 {
     margin-top: 5px;
@@ -125,7 +130,7 @@ body {
   text-align: center;
   background-color: $dark;
   border-radius: 20px;
-  padding: 25px 25px !important;
+  padding: 25px 25px;
   img {
     border-radius: 20px;
     width: 100%;
