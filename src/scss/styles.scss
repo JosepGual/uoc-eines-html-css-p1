@@ -21,6 +21,8 @@ body {
 
 iframe {
   border: none;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .text-center {
@@ -43,13 +45,6 @@ iframe {
 }
 
 //Home
-.home-songs {
-  iframe {
-    width: 100%;
-    border: none;
-    margin: 0 auto;
-  }
-}
 
 .pre-footer {
   margin-top: 25px;
