@@ -17,7 +17,8 @@
     "parcel": "latest",
     "posthtml-expressions": "^1.11.3",
     "posthtml-include": "^2.0.1",
-    "rimraf": "^5.0.7"
+    "rimraf": "^5.0.7",
+    "sharp": "^0.31.3"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2"
