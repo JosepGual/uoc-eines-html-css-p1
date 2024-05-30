@@ -3,6 +3,10 @@
     <div class="header-image">
       <picture>
         <source
+        media="(max-width: 450px)"
+        srcset="images/{{album_img_name}}.png?width=450"
+      />
+        <source
           media="(max-width: 699px)"
           srcset="images/{{album_img_name}}.png"
         />
