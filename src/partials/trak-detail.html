@@ -1,37 +1,70 @@
-<div class="container">
+<div>
+  <if condition="album_img_name">
+    <div class="header-image">
+      <picture>
+        <source
+          media="(max-width: 699px)"
+          srcset="images/{{album_img_name}}.png"
+        />
+        <source
+          media="(min-width: 700px)"
+          srcset="images/{{album_img_name}}-h.jpg"
+        />
+        <img src="images/{{album_img_name}}-h.jpg" alt="{{album}}" />
+      </picture>
+    </div>
+  </if>
+  <div class="container">
     <div>
-        <h1 class="text-center">{{name}}</h1>
+      <h1 class="text-center">{{name}}</h1>
     </div>
     <div class="trak">
-        <div>
-            <iframe style="border-radius:12px" title="{{name}}" src="{{url_embed_spotify}}" height="352"
-                allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"></iframe>
-            <p><strong>Disc: </strong>{{album}}</p>
-            <p><strong>Any: </strong>{{year}}</p>
+      <div>
+        <iframe
+          style="border-radius: 12px"
+          title="{{name}}"
+          src="{{url_embed_spotify}}"
+          height="352"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+        <p><strong>Disc: </strong>{{album}}</p>
+        <p><strong>Any: </strong>{{year}}</p>
+        <div class="tags">
+          <if condition="tags">
+            <each loop="tag, index in tags">
+              <img src="images/tags/{{tag}}.png?width=45" alt="{{tag}}">
+            </each>
+          </if>
         </div>
-        <div>
-            <p>{{{lyrics}}}</p>
-        </div>
+      </div>
+      <div>
+        <p>{{{lyrics}}}</p>
+      </div>
     </div>
     <div class="py">
-        <if condition="url_embed_yt">
-            <iframe class="yt-video" title="{{name}}" src="{{url_embed_yt}}" title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </if>
+      <if condition="url_embed_yt">
+        <iframe
+          class="yt-video"
+          title="{{name}}"
+          src="{{url_embed_yt}}"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </if>
     </div>
     <if condition="related">
-        <div class="py">
-            <h2>Altres cançons:</h2>
-            <ul>
-                <each loop='item, index in related'>
-                    
-                        <li><a href="{{item.link}}">{{item.name}}</a></li>
-                    
-                </each>
-            </ul>
-        </div>
-
+      <div class="py">
+        <h2>Altres cançons:</h2>
+        <ul>
+          <each loop="item, index in related">
+            <li><a href="{{item.link}}">{{item.name}}</a></li>
+          </each>
+        </ul>
+      </div>
     </if>
+  </div>
 </div>

@@ -48,12 +48,8 @@ iframe {
 
 .pre-footer {
   margin-top: 25px;
-  background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255) 0%,
-      rgba(0, 173, 11, 0) 30%
-    ),
-    url("../images/image-group.png?as=webp");
+  clip-path: ellipse(100% 100% at 50% 100%);
+  background: url("../images/image-group.png?as=webp");
   background-repeat: no-repeat;
   background-position-x: 50%;
   background-position-y: 50%;
@@ -116,6 +112,12 @@ iframe {
 }
 
 //Trak
+.header-image{
+  img{
+    width: 100%;
+  }
+}
+
 .trak{
   display: flex;
   flex-wrap: wrap;
@@ -124,6 +126,15 @@ iframe {
     margin: 10px;
   }
 
+}
+
+.tags{
+  display: flex;
+  padding-top: 20px;
+  img{
+    margin-right: 20px;
+    width: 45px ;
+  }
 }
 
 //notices
