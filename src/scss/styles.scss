@@ -34,7 +34,7 @@ iframe {
   justify-content: center;
 }
 
-.py{
+.py {
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -64,6 +64,48 @@ iframe {
 }
 
 //Qui som?
+
+@keyframes goIn {
+  80%  {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes colors {
+  0%{
+    fill: red;
+  } 
+  33%{
+    fill: green;
+  }
+  66%{
+    fill: blue;
+  }
+}
+
+.logo-animated{
+  svg{
+    path{
+      animation: colors 2s infinite;
+      &:active{
+        animation: none;
+      }
+    }
+  }
+  animation: goIn 1s; 
+  padding-bottom: 25px;
+}
+
+
+
+.eslogan {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .presentacio {
   max-width: 600px;
 }
@@ -106,28 +148,27 @@ iframe {
 }
 
 //Trak
-.header-image{
-  img{
+.header-image {
+  img {
     width: 100%;
   }
 }
 
-.trak{
+.trak {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  div{
+  div {
     margin: 10px;
   }
-
 }
 
-.tags{
+.tags {
   display: flex;
   padding-top: 20px;
-  img{
+  img {
     margin-right: 20px;
-    width: 45px ;
+    width: 45px;
   }
 }
 
