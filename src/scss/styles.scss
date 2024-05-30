@@ -85,9 +85,7 @@ iframe {
   margin: 0 auto;
   img {
     width: 100%;
-    max-width: 300px;
     height: auto;
-    max-height: 300px;
   }
 }
 
@@ -104,10 +102,6 @@ iframe {
 @media only screen and (min-width: ($breakepoint)) {
   .info-disc {
     flex-direction: row;
-
-    img {
-      max-width: 300px;
-    }
   }
 }
 

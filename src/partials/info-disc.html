@@ -1,16 +1,19 @@
 <div class="info-disc">
-    <img src='{{img_url}}' alt="{{nom}}">
-    <div class="text-disc">
-        <h3>{{nom}}</h3>
-        <ol>
-            <each loop="item, index in list">
-                <if condition="!item.link">
-                    <li>{{item.titol}}</li>
-                </if>
-                <else>
-                    <li><a href='{{item.link}}'>{{item.titol}}</a></li>
-                </else>
-            </each>
-        </ol>
-    </div>
+  <img
+    srcset="{{img_url}}?width=320 1x, {{img_url}}?width=480 1.5x, {{img_url}}?width=640 2x"
+    alt="{{nom}}"
+  />
+  <div class="text-disc">
+    <h3>{{nom}}</h3>
+    <ol>
+      <each loop="item, index in list">
+        <if condition="!item.link">
+          <li>{{item.titol}}</li>
+        </if>
+        <else>
+          <li><a href="{{item.link}}">{{item.titol}}</a></li>
+        </else>
+      </each>
+    </ol>
+  </div>
 </div>
