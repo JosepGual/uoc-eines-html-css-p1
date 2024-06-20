@@ -6,6 +6,7 @@
     <title>P1 - UOC</title>
     <link rel="stylesheet" href="scss/styles.scss" />
     <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/spotify.js"></script>
     <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
   </head>
 
@@ -24,15 +25,5 @@
       <include src="./src/partials/pre-footer.html"></include>
     </main>
     <include src="./src/partials/footer.html"></include>
-    <script async>
-      window.onSpotifyIframeApiReady = (IFrameAPI) => {
-        const element = document.getElementById("embed-iframe");
-        const options = {
-          uri: "spotify:track:5tn5NYeF8c8A2VeIa53kcv",
-        };
-        const callback = (EmbedController) => {};
-        IFrameAPI.createController(element, options, callback);
-      };
-    </script>
   </body>
 </html>
