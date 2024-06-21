@@ -3,18 +3,33 @@
     <div class="header-image">
       <picture>
         <source
-        media="(max-width: 450px)"
-        srcset="images/{{album_img_name}}.png?width=450"
-      />
+          class="ratio-square"
+          media="(max-width: 450px)"
+          srcset="images/{{album_img_name}}.png?width=450"
+          width="450"
+          height="450"
+        />
         <source
+          class="ratio-square"
           media="(max-width: 699px)"
           srcset="images/{{album_img_name}}.png"
+          width="699"
+          height="699"
         />
         <source
+          class="ratio-h"
           media="(min-width: 700px)"
           srcset="images/{{album_img_name}}-h.jpg"
+          width="1920"
+          height="300"
         />
-        <img src="images/{{album_img_name}}-h.jpg" alt="{{album}}" />
+        <img
+          class="ratio-h"
+          src="images/{{album_img_name}}-h.jpg"
+          alt="{{album}}"
+          width="1920"
+          height="300"
+        />
       </picture>
     </div>
   </if>
@@ -35,7 +50,12 @@
         <div class="tags">
           <if condition="tags">
             <each loop="tag, index in tags">
-              <img src="images/tags/{{tag}}.png?width=45" alt="{{tag}}" width="45" height="45">
+              <img
+                src="images/tags/{{tag}}.png?width=45"
+                alt="{{tag}}"
+                width="45"
+                height="45"
+              />
             </each>
           </if>
         </div>
