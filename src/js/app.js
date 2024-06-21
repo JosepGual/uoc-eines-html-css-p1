@@ -1,4 +1,5 @@
 import "@fortawesome/fontawesome-free/css/all.css";
+import '@justinribeiro/lite-youtube';
 
 
 
