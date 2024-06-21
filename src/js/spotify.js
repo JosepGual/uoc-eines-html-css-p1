@@ -4,7 +4,7 @@ window.onSpotifyIframeApiReady = (IFrameAPI) => {
     const uri = element.getAttribute("data-uri");
     const options = {
       uri: uri,
-      height: 230,
+      height: 232,
     };
     const callback = (EmbedController) => {
       EmbedController.togglePlay();
